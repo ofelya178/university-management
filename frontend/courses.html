@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fənlər | University Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-body">
+
+    <div class="admin-layout">
+
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h2>🎓 Universitet</h2>
+                <p>İdarəetmə Sistemi</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="index.html">🏠 Ana səhifə</a>
+                <a href="students.html">👨‍🎓 Tələbələr</a>
+                <a href="teachers.html">👨‍🏫 Müəllimlər</a>
+                <a href="courses.html" class="active">📚 Fənlər</a>
+                <a href="grades.html">📝 Qiymətlər</a>
+                <a href="attendance.html">📅 Davamiyyət</a>
+                <a href="login.html">⚙️ Giriş</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="login.html">🚪 Çıxış</a>
+            </div>
+        </aside>
+
+        <div class="main-content">
+
+            <header class="topbar">
+    <div class="topbar-left">
+        <button type="button" id="sidebarToggle" class="menu-toggle">☰</button>
+        <div>
+            <h2>Admin Paneli</h2>
+            <p>Universitet idarəetmə sistemi</p>
+        </div>
+    </div>
+
+    <div class="topbar-actions">
+        <div class="global-search">
+            <span>🔍</span>
+            <input type="text" id="globalSearch" placeholder="Axtarış...">
+        </div>
+
+        <div class="dropdown">
+            <button type="button" id="notificationToggle" class="topbar-button">🔔</button>
+            <div class="dropdown-menu" id="notificationPanel">
+                <h3>Bildirişlər</h3>
+                <p>Hələlik yeni bildiriş yoxdur.</p>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" id="adminToggle" class="admin-button">👤 Admin ⌄</button>
+            <div class="dropdown-menu" id="adminPanel">
+                <h3>Admin hesabı</h3>
+                <p>Administrator</p>
+                <button type="button" id="logoutButton">🚪 Hesabdan çıx</button>
+            </div>
+        </div>
+    </div>
+</header>
+
+            <main class="dashboard-content">
+
+                <div class="page-heading">
+                    <h1>📚 Fənlər</h1>
+                    <p>Fənlərin əlavə edilməsi və idarə olunması</p>
+                </div>
+
+                <div class="card">
+                    <h2>Yeni fənn əlavə et</h2>
+
+                    <form id="courseForm">
+
+                        <input type="text" id="courseName"
+                            placeholder="Fənnin adı" required>
+
+                        <input type="text" id="courseCode"
+                            placeholder="Fənnin kodu" required>
+
+                        <input type="text" id="courseTeacher"
+                            placeholder="Müəllimin adı" required>
+
+                        <input type="number" id="courseCredit"
+                            placeholder="Kredit sayı" min="1" required>
+
+                        <button type="submit">Fənn əlavə et</button>
+
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h2>Fənlərin siyahısı</h2>
+
+                    <input type="text" id="courseSearch"
+                        placeholder="🔍 Fənn axtar...">
+
+                    <div id="courseList"></div>
+                </div>
+
+                <footer class="dashboard-footer">
+                    <p>© 2026 University Management System</p>
+                </footer>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

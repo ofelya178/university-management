@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-body">
+
+    <div class="admin-layout">
+
+        <!-- SOL MENYU -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h2>🎓 Universitet</h2>
+                <p>İdarəetmə Sistemi</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="index.html" class="active">🏠 Ana səhifə</a>
+                <a href="students.html">👨‍🎓 Tələbələr</a>
+                <a href="teachers.html">👨‍🏫 Müəllimlər</a>
+                <a href="courses.html">📚 Fənlər</a>
+                <a href="grades.html">📝 Qiymətlər</a>
+                <a href="attendance.html">📅 Davamiyyət</a>
+                <a href="login.html">⚙️ Giriş</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="login.html">🚪 Çıxış</a>
+            </div>
+        </aside>
+
+        <!-- ƏSAS HİSSƏ -->
+        <div class="main-content">
+
+            <!-- YUXARI PANEL -->
+            <header class="topbar">
+
+                <div class="topbar-left">
+                    <button type="button" id="sidebarToggle" class="menu-toggle">
+                        ☰
+                    </button>
+
+                <div>
+                    <h2>Admin Paneli</h2>
+                    <p>Universitet idarəetmə sistemi</p>
+                </div>
+            </div>
+
+            <div class="topbar-actions">
+
+        <!-- AXTARIŞ -->
+        <div class="global-search">
+            <span>🔍</span>
+            <input type="text" id="globalSearch"
+                placeholder="Axtarış...">
+        </div>
+
+        <!-- BİLDİRİŞLƏR -->
+        <div class="dropdown">
+            <button type="button" id="notificationToggle"
+                class="topbar-button">
+                🔔
+            </button>
+
+            <div class="dropdown-menu" id="notificationPanel">
+                <h3>Bildirişlər</h3>
+                <p>Hələlik yeni bildiriş yoxdur.</p>
+            </div>
+        </div>
+
+        <!-- ADMIN PROFİLİ -->
+        <div class="dropdown">
+            <button type="button" id="adminToggle"
+                class="admin-button">
+                👤 Admin ⌄
+            </button>
+
+            <div class="dropdown-menu" id="adminPanel">
+                <h3>Admin hesabı</h3>
+                <p>Administrator</p>
+                <button type="button" id="logoutButton">
+                    🚪 Hesabdan çıx
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+            <!-- SƏHİFƏ MƏZMUNU -->
+            <main class="dashboard-content">
+
+                <div class="page-heading">
+                    <h1>Ana Səhifə</h1>
+                    <p>Universitet üzrə ümumi statistika</p>
+                </div>
+
+                <!-- STATİSTİKA KARTLARI -->
+                <section class="dashboard">
+
+                    <div class="card">
+                        <h3>👨‍🎓 Tələbələr</h3>
+                        <p id="studentCount">0</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>👨‍🏫 Müəllimlər</h3>
+                        <p id="teacherCount">0</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>📚 Fənlər</h3>
+                        <p id="courseCount">0</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>📝 Qiymətlər</h3>
+                        <p id="gradeCount">0</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>📊 Orta qiymət</h3>
+                        <p id="averageGrade">0</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>📅 Davamiyyət qeydləri</h3>
+                        <p id="attendanceCount">0</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>📈 Davamiyyət faizi</h3>
+                        <p id="attendancePercentage">0%</p>
+                    </div>
+
+                </section>
+
+                <footer class="dashboard-footer">
+                    <p>© 2026 University Management System</p>
+                </footer>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

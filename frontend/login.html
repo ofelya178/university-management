@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Management System - Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-page">
+
+    <div class="login-layout">
+
+        <!-- SOL HİSSƏ -->
+        <section class="login-hero">
+            <div class="hero-overlay">
+                <div class="university-logo">🎓</div>
+
+                <h1>University<br>Management System</h1>
+
+                <p>
+                    Universitetin idarə olunması artıq
+                    daha asan və daha sürətlidir.
+                </p>
+
+                <div class="hero-bottom">
+                    <span>© 2026 University Management System</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ORTA HİSSƏ -->
+        <section class="login-content">
+
+            <div class="login-box">
+                <div class="login-heading">
+                    <span>🎓</span>
+                    <h2>Xoş gəlmisiniz!</h2>
+                    <p>Hesabınıza daxil olmaq üçün məlumatları yazın.</p>
+                </div>
+
+                <form id="loginForm">
+                    <label>E-poçt ünvanı</label>
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="example@gmail.com"
+                        required
+                    >
+
+                    <label>Şifrə</label>
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Şifrənizi daxil edin"
+                        required
+                    >
+
+                    <button type="submit" class="login-submit">
+                        Daxil ol →
+                    </button>
+                </form>
+
+                <div class="login-divider">
+                    <span>və ya</span>
+                </div>
+
+                <h3>Yeni hesab yarat</h3>
+
+                <form id="registerForm">
+                    <input
+                        type="text"
+                        id="registerName"
+                        placeholder="Ad və soyad"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="E-poçt ünvanı"
+                        required
+                    >
+
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        placeholder="Şifrə (minimum 8 simvol)"
+                        minlength="8"
+                        required
+                    >
+
+                    <button type="submit" class="register-submit">
+                        Qeydiyyatdan keç
+                    </button>
+                </form>
+
+                <p id="authMessage"></p>
+
+                <a href="index.html" class="back-home">
+                    Ana səhifəyə qayıt
+                </a>
+            </div>
+
+        </section>
+
+        <!-- SAĞ HİSSƏ -->
+        <aside class="login-info">
+            <div>
+                <h2>Universitet sistemi</h2>
+                <p>Bir platformada bütün idarəetmə imkanları.</p>
+
+                <div class="login-feature">✓ Tələbələrin idarə edilməsi</div>
+                <div class="login-feature">✓ Müəllimlərin idarə edilməsi</div>
+                <div class="login-feature">✓ Fənlər və qiymətlər</div>
+                <div class="login-feature">✓ Davamiyyətə nəzarət</div>
+            </div>
+
+            <div class="info-footer">
+                Təhsil idarəçiliyində yeni yanaşma.
+            </div>
+        </aside>
+
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
