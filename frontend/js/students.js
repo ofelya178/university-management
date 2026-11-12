@@ -3,7 +3,8 @@ if (!localStorage.getItem("token")) {
     window.location.href = "login.html";
 }
 
-const API_URL = "http://localhost:5000/api/students";
+const API_URL = "https://university-management-djwt.onrender.com/api/students";
+
 
 const studentForm = document.getElementById("studentForm");
 const studentList = document.getElementById("studentList");

@@ -102,7 +102,7 @@ async function displayTeachers() {
     const teacherList = document.getElementById("teacherList");
 
     try {
-        const response = await fetch("http://localhost:5000/api/teachers");
+        const response = await fetch("https://university-management-djwt.onrender.com/api/teachers");
 
         if (!response.ok) {
             throw new Error("Müəllimləri yükləmək mümkün olmadı");
@@ -228,8 +228,8 @@ if (teacherForm) {
         try {
             const response = await fetch(
                 editingTeacherId
-                    ? `http://localhost:5000/api/teachers/${editingTeacherId}`
-                    : "http://localhost:5000/api/teachers",
+                    ? `https://university-management-djwt.onrender.com/api/teachers/${editingTeacherId}`
+                    : "https://university-management-djwt.onrender.com/api/teachers",
                 {
                     method: editingTeacherId ? "PUT" : "POST",
                     headers: {
@@ -302,7 +302,7 @@ async function deleteTeacher(id) {
 
     try {
         const response = await fetch(
-            `http://localhost:5000/api/teachers/${id}`,
+            `https://university-management-djwt.onrender.com/api/teachers/${id}`,
             {
                 method: "DELETE"
             }
@@ -359,7 +359,7 @@ async function displayCourses() {
     const courseList = document.getElementById("courseList");
 
     try {
-        const response = await fetch("http://localhost:5000/api/courses");
+        const response = await fetch("https://university-management-djwt.onrender.com/api/courses");
 
         if (!response.ok) {
             throw new Error("Fənləri yükləmək mümkün olmadı");
@@ -482,8 +482,8 @@ if (courseForm) {
         try {
             const response = await fetch(
                 editingCourseId
-                    ? `http://localhost:5000/api/courses/${editingCourseId}`
-                    : "http://localhost:5000/api/courses",
+                    ? `https://university-management-djwt.onrender.com/api/courses/${editingCourseId}`
+                    : "https://university-management-djwt.onrender.com/api/courses",
                 {
                     method: editingCourseId ? "PUT" : "POST",
                     headers: {
@@ -552,7 +552,7 @@ async function deleteCourse(id) {
 
     try {
         const response = await fetch(
-            `http://localhost:5000/api/courses/${id}`,
+            `https://university-management-djwt.onrender.com/api/courses/${id}`,
             {
                 method: "DELETE"
             }
@@ -598,9 +598,9 @@ if (courseSearch) {
 // QİYMƏTLƏR - MONGODB
 // ========================================
 
-const GRADE_API = "http://localhost:5000/api/grades";
-const STUDENT_API = "http://localhost:5000/api/students";
-const COURSE_API = "http://localhost:5000/api/courses";
+const GRADE_API = "https://university-management-djwt.onrender.com/api/grades";
+const STUDENT_API = "https://university-management-djwt.onrender.com/api/students";
+const COURSE_API = "https://university-management-djwt.onrender.com/api/courses";
 
 // Tələbə və fənn seçimlərini MongoDB-dən yüklə
 async function loadGradeOptions() {
@@ -850,9 +850,9 @@ displayGrades();
 // DAVAMIYYƏT - MONGODB
 // ========================================
 
-const ATTENDANCE_API = "http://localhost:5000/api/attendance";
-const ATTENDANCE_STUDENT_API = "http://localhost:5000/api/students";
-const ATTENDANCE_COURSE_API = "http://localhost:5000/api/courses";
+const ATTENDANCE_API = "https://university-management-djwt.onrender.com/api/attendance";
+const ATTENDANCE_STUDENT_API = "https://university-management-djwt.onrender.com/api/students";
+const ATTENDANCE_COURSE_API = "https://university-management-djwt.onrender.com/api/courses";
 
 // Tələbə və fənn seçimlərini doldur
 async function loadAttendanceOptions() {
@@ -1101,7 +1101,7 @@ if (loginForm) {
         const message = document.getElementById("authMessage");
 
         try {
-            const response = await fetch("http://localhost:5000/api/auth/login", {
+            const response = await fetch("https://university-management-djwt.onrender.com/api/auth/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -1146,7 +1146,7 @@ if (registerForm) {
         const message = document.getElementById("authMessage");
 
         try {
-            const response = await fetch("http://localhost:5000/api/auth/register", {
+            const response = await fetch("https://university-management-djwt.onrender.com/api/auth/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -1176,11 +1176,11 @@ async function loadDashboardStats() {
     try {
         const [students, teachers, courses, grades, attendance] =
             await Promise.all([
-                fetch("http://localhost:5000/api/students").then(res => res.json()),
-                fetch("http://localhost:5000/api/teachers").then(res => res.json()),
-                fetch("http://localhost:5000/api/courses").then(res => res.json()),
-                fetch("http://localhost:5000/api/grades").then(res => res.json()),
-                fetch("http://localhost:5000/api/attendance").then(res => res.json())
+                fetch("https://university-management-djwt.onrender.com/api/students").then(res => res.json()),
+                fetch("https://university-management-djwt.onrender.com/api/teachers").then(res => res.json()),
+                fetch("https://university-management-djwt.onrender.com/api/courses").then(res => res.json()),
+                fetch("https://university-management-djwt.onrender.com/api/grades").then(res => res.json()),
+                fetch("https://university-management-djwt.onrender.com/api/attendance").then(res => res.json())
             ]);
 
         const studentCount = document.getElementById("studentCount");
